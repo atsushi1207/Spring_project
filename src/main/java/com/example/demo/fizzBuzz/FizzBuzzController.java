@@ -11,19 +11,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class FizzBuzzController {
 
 	@Autowired
-	//private static final Object list = null;
-	private /*final*/ FizzBuzzService fizzbuzzService;
-
-	/*public FizzBuzzController(FizzBuzzService fizzbuzzService) {
-		this.fizzbuzzService = fizzbuzzService;*/
+	private FizzBuzzService fizzbuzzService;
 
 	@GetMapping("/fizzbuzz")
 	public String fizzbuzz(Model model) {
 
-		//String result = "";
 		List<String> list = fizzbuzzService.generateFizzbuzzList();
-
-		//result = String.ValueOf(fizzbuzzService.);
 
 		model.addAttribute("result", list);
 
