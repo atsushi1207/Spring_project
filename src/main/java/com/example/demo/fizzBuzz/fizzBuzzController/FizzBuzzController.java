@@ -10,7 +10,7 @@ import com.example.demo.fizzBuzz.fizzBuzzService.FizzBuzzService;
 
 @Controller
 public class FizzBuzzController {
-
+	//コンストラクタインジェクション
 	private final FizzBuzzService fizzbuzzService;
 
 	public FizzBuzzController(FizzBuzzService fizzbuzzService) {
