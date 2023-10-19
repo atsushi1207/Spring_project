@@ -1,6 +1,5 @@
 package com.example.demo.minus;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -9,8 +8,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class MinusController {
-	@Autowired
-	private MinusService minusService;
+
+	private final MinusService minusService;
+
+	public MinusController(MinusService minusService) {
+		this.minusService = minusService;
+	}
 
 	@GetMapping("/minus")
 	public String minusForm() {
