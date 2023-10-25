@@ -21,9 +21,9 @@ public class MinusController {
 	}
 
 	@PostMapping("/minus")
-	public String minusForm(@RequestParam int num1, @RequestParam int num2, Model model) {
+	public String minusForm(@RequestParam int number1, @RequestParam int number2, Model model) {
 
-		int result = minusService.calculateMinus(num1, num2);
+		int result = minusService.calculateMinus(number1, number2);
 
 		model.addAttribute("result", result);
 

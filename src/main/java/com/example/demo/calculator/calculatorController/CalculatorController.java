@@ -20,7 +20,7 @@ public class CalculatorController {
 	}
 
 	@GetMapping("/calculator")
-	public String index(Model model) {
+	public String index() {
 		return "calculator.html";
 	}
 

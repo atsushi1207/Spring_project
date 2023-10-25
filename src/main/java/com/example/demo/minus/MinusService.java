@@ -5,9 +5,9 @@ import org.springframework.stereotype.Service;
 @Service
 public class MinusService {
 
-	public int calculateMinus(int num1, int num2) {
+	public int calculateMinus(int number1, int number2) {
 
-		return num1 - num2;
+		return number1 - number2;
 	}
 
 }
