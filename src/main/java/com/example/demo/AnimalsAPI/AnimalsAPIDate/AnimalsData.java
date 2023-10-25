@@ -13,7 +13,7 @@ public class AnimalsData {
 	@JsonProperty("name")
 	private String name;
 
-	@JsonProperty("Japanses_name")
+	@JsonProperty("japanese_name")
 	private String japanese_name;
 
 	@JsonProperty("cry")
