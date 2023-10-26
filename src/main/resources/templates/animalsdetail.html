@@ -11,11 +11,11 @@
 	<form action="/animalssearch" method="get">
 		<ul>
 			<li th:each="animals : ${animalsDetail}">
-					<p th:text="'No:'+ ${animals.id}"></p>
-					<p th:text="'英名:'+ ${animals.name}"></p>
-					<p th:text="'和名:' + ${animals.japaneseName}"></p>
-					<p th:text="'鳴き声:' + ${animals.cry}"></p>
-			</li> 
+				<p th:text="'No:'+ ${animals.id}"></p>
+				<p th:text="'英名:'+ ${animals.name}"></p>
+				<p th:text="'和名:' + ${animals.japaneseName}"></p>
+				<p th:text="'鳴き声:' + ${animals.cry}"></p>
+			</li>
 		</ul>
 		<input type="submit" value="トップへ">
 	</form>

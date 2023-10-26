@@ -9,13 +9,8 @@
 <body>
 	<h1>動物検索画面</h1>
 	<form action="/animalsdetail" method="get">
-		<select name="animalssearch">
-			<option value="1">イヌ</option>
-			<option value="2">ネコ</option>
-			<option value="3">レッサーパンダ</option>
-			<option value="4">ライオン</option>
-			<option value="5">ラッコ</option>
-			<option value="6">ブタ</option>
+		<select name="animalsSearch">
+			<option th:each="animals : ${animalsSearch}" th:value="${animals.japaneseName}" th:text="${animals.japaneseName}"></option>
 		</select>
 		<input type="submit" value="検索">
 	</form>

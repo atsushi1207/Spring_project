@@ -13,18 +13,18 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 @Repository
 public class AnimalsRepository {
 
-	public Animals[] getAnimalsr() throws IOException {
+	public Animals[] getAnimalsName() throws IOException {
 		String url = "https://jsn9xu2vsk.execute-api.ap-northeast-1.amazonaws.com/sample/sampleapi";
 
 		RestTemplate rest1 = new RestTemplate();
 
 		ResponseEntity<String> responseEntity1 = rest1.getForEntity(url, String.class);
 
-		String json = responseEntity1.getBody();
+		String json1 = responseEntity1.getBody();
 
 		ObjectMapper mapper = new ObjectMapper();
 
-		Animals[] animalsList = mapper.readValue(json, Animals[].class);
+		Animals[] animalsList = mapper.readValue(json1, Animals[].class);
 
 		return animalsList;
 
@@ -46,4 +46,5 @@ public class AnimalsRepository {
 		return animalsList;
 
 	}
+
 }

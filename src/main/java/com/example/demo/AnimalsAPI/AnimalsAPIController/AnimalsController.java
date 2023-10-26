@@ -1,6 +1,7 @@
 package com.example.demo.AnimalsAPI.AnimalsAPIController;
 
 import java.io.IOException;
+import java.util.List;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -20,7 +21,11 @@ public class AnimalsController {
 	}
 
 	@GetMapping("/animalssearch")
-	public String index() {
+	public String getAnimalsindex(Model model) throws IOException {
+		
+		List<Animals> animalsSearch = animalsservice.getAnimalsName();
+
+		model.addAttribute("animalsSearch", animalsSearch);
 		
 		return "animalssearch";
 	}

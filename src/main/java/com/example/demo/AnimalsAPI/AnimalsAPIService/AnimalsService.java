@@ -1,6 +1,8 @@
 package com.example.demo.AnimalsAPI.AnimalsAPIService;
 
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.List;
 
 import org.springframework.stereotype.Service;
 
@@ -16,8 +18,16 @@ public class AnimalsService {
 		this.animalsrepository = animalsrepository;
 	}
 
+	public List<Animals> getAnimalsName() throws IOException {
+		
+		Animals[] animalsList = animalsrepository.getAnimalsName();
+		
+		return Arrays.asList(animalsList);
+	}
+	
 	public Animals[] getAnimalById(String animalId) throws IOException {
 		
 		return animalsrepository.getAnimalsById(animalId);
 	}
+
 }
