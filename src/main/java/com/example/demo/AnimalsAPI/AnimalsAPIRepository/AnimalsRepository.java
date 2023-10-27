@@ -37,11 +37,11 @@ public class AnimalsRepository {
 
 		ResponseEntity<String> responseEntity2 = rest2.exchange(url, HttpMethod.GET, null, String.class, animalId);
 
-		String json = responseEntity2.getBody();
+		String json2 = responseEntity2.getBody();
 
 		ObjectMapper mapper = new ObjectMapper();
 
-		Animals[] animalsList = mapper.readValue(json, Animals[].class);
+		Animals[] animalsList = mapper.readValue(json2, Animals[].class);
 
 		return animalsList;
 
