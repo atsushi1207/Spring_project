@@ -1,4 +1,4 @@
-package com.example.demo.AnimalsAPI.AnimalsAPIRepository;
+package com.example.demo.animalsapi.animalsapirepository;
 
 import java.io.IOException;
 
@@ -16,15 +16,15 @@ public class AnimalsRepository {
 	public Animals[] getAnimalsName() throws IOException {
 		String url = "https://jsn9xu2vsk.execute-api.ap-northeast-1.amazonaws.com/sample/sampleapi";
 
-		RestTemplate rest1 = new RestTemplate();
+		RestTemplate rest = new RestTemplate();
 
-		ResponseEntity<String> responseEntity1 = rest1.getForEntity(url, String.class);
+		ResponseEntity<String> responseEntity = rest.getForEntity(url, String.class);
 
-		String json1 = responseEntity1.getBody();
+		String json = responseEntity.getBody();
 
 		ObjectMapper mapper = new ObjectMapper();
 
-		Animals[] animalsList = mapper.readValue(json1, Animals[].class);
+		Animals[] animalsList = mapper.readValue(json, Animals[].class);
 
 		return animalsList;
 
@@ -33,15 +33,15 @@ public class AnimalsRepository {
 	public Animals[] getAnimalsById(String animalId) throws IOException {
 		String url = "https://jsn9xu2vsk.execute-api.ap-northeast-1.amazonaws.com/sample/sampleapi?id={id}";
 
-		RestTemplate rest2 = new RestTemplate();
+		RestTemplate rest = new RestTemplate();
 
-		ResponseEntity<String> responseEntity2 = rest2.exchange(url, HttpMethod.GET, null, String.class, animalId);
+		ResponseEntity<String> responseEntity = rest.exchange(url, HttpMethod.GET, null, String.class, animalId);
 
-		String json2 = responseEntity2.getBody();
+		String json = responseEntity.getBody();
 
 		ObjectMapper mapper = new ObjectMapper();
 
-		Animals[] animalsList = mapper.readValue(json2, Animals[].class);
+		Animals[] animalsList = mapper.readValue(json, Animals[].class);
 
 		return animalsList;
 

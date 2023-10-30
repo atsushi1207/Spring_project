@@ -1,4 +1,4 @@
-package com.example.demo.AnimalsAPI.AnimalsAPIController;
+package com.example.demo.animalsapi.animalsapicontroller;
 
 import java.io.IOException;
 import java.util.List;
@@ -8,8 +8,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.example.demo.AnimalsAPI.AnimalsAPIService.AnimalsService;
+import com.example.demo.animalsapi.animalsapiservice.AnimalsService;
 import com.example.demo.sampleAPI.sampleAPIDate.Animals;
+
 
 @Controller
 public class AnimalsController {
@@ -20,24 +21,24 @@ public class AnimalsController {
 		this.animalsservice = animalsservice;
 	}
 
-	@GetMapping("/animalssearch")
+	@GetMapping("/animalsSearch")
 	public String getAnimalsindex(Model model) throws IOException {
 		
 		List<Animals> animalsSearch = animalsservice.getAnimalsName();
 
 		model.addAttribute("animalsSearch", animalsSearch);
 		
-		return "animalssearch";
+		return "animalsSearch";
 	}
 
-	@GetMapping("/animalsdetail")
-	public String getAnimals(@RequestParam("animalssearch")String animalId, Model model) throws IOException {
+	@GetMapping("animalsDetail")
+	public String getAnimals(@RequestParam("animalsSearch")String animalId, Model model) throws IOException {
 
-		Animals[] animalsDetil = animalsservice.getAnimalById(animalId);
+		Animals[] animalsDetail = animalsservice.getAnimalById(animalId);
 
-		model.addAttribute("animalsDetail", animalsDetil);
+		model.addAttribute("animalsDetail", animalsDetail);
 
-		return "animalsdetail";
+		return "animalsDetail";
 	}
 
 }

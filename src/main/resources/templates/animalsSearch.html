@@ -8,8 +8,8 @@
 
 <body>
 	<h1>動物検索画面</h1>
-	<form action="/animalsdetail" method="get">
-		<select name="animalssearch">
+	<form action="animalsDetail" method="get">
+		<select name="animalsSearch">
 			<option th:each="animals : ${animalsSearch}" th:value="${animals.id}" th:text="${animals.japaneseName}"></option>
 		</select>
 		<input type="submit" value="検索">
