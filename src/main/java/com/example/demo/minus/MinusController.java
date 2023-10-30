@@ -27,7 +27,7 @@ public class MinusController {
 
 		model.addAttribute("result", result);
 
-		return "minus.html";
+		return "minus";
 	}
 
 }
