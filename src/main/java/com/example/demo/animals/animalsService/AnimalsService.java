@@ -1,4 +1,4 @@
-package com.example.demo.animalsapi.animalsapiservice;
+package com.example.demo.animals.animalsService;
 
 import java.io.IOException;
 import java.util.Arrays;
@@ -6,7 +6,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.example.demo.animalsapi.animalsapirepository.AnimalsRepository;
+import com.example.demo.animals.animalsRepository.AnimalsRepository;
 import com.example.demo.sampleAPI.sampleAPIDate.Animals;
 
 @Service

@@ -1,4 +1,4 @@
-package com.example.demo.calculator.CalculatorInterface;
+package com.example.demo.calculator.calculatorInterface;
 
 public class CalculateBody {
 	public int number1;

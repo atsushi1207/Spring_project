@@ -1,4 +1,4 @@
-package com.example.demo.animalsapi.animalsapirepository;
+package com.example.demo.animals.animalsRepository;
 
 import java.io.IOException;
 

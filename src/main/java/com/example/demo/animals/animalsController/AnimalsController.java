@@ -1,5 +1,4 @@
-package com.example.demo.animalsapi.animalsapicontroller;
-
+package com.example.demo.animals.animalsController;
 import java.io.IOException;
 import java.util.List;
 
@@ -8,7 +7,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.example.demo.animalsapi.animalsapiservice.AnimalsService;
+import com.example.demo.animals.animalsService.AnimalsService;
 import com.example.demo.sampleAPI.sampleAPIDate.Animals;
 
 

@@ -1,4 +1,4 @@
-package com.example.demo.animalsapi.animalsapidate;
+package com.example.demo.animals.animalsDate;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
