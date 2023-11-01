@@ -12,22 +12,22 @@ import com.example.demo.sampleAPI.sampleAPIDate.Animals;
 @Service
 public class AnimalsService {
 
-	private final AnimalsRepository animalsrepository;
+	private final AnimalsRepository animalsRepository;
 
-	public AnimalsService(AnimalsRepository animalsrepository) {
-		this.animalsrepository = animalsrepository;
+	public AnimalsService(AnimalsRepository animalsRepository) {
+		this.animalsRepository = animalsRepository;
 	}
 
 	public List<Animals> getAnimalsName() throws IOException {
 		
-		Animals[] animalsList = animalsrepository.getAnimalsName();
+		Animals[] animalsList = animalsRepository.getAnimalsName();
 		
 		return Arrays.asList(animalsList);
 	}
 	
 	public Animals[] getAnimalById(String animalId) throws IOException {
 		
-		return animalsrepository.getAnimalsById(animalId);
+		return animalsRepository.getAnimalsById(animalId);
 	}
 
 }

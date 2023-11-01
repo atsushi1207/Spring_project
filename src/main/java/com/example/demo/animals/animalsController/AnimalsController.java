@@ -14,16 +14,16 @@ import com.example.demo.sampleAPI.sampleAPIDate.Animals;
 @Controller
 public class AnimalsController {
 
-	private final AnimalsService animalsservice;
+	private final AnimalsService animalsService;
 
-	public AnimalsController(AnimalsService animalsservice) {
-		this.animalsservice = animalsservice;
+	public AnimalsController(AnimalsService animalsService) {
+		this.animalsService = animalsService;
 	}
 
 	@GetMapping("/animalsSearch")
 	public String getAnimalsindex(Model model) throws IOException {
 		
-		List<Animals> animalsSearch = animalsservice.getAnimalsName();
+		List<Animals> animalsSearch = animalsService.getAnimalsName();
 
 		model.addAttribute("animalsSearch", animalsSearch);
 		
@@ -33,7 +33,7 @@ public class AnimalsController {
 	@GetMapping("animalsDetail")
 	public String getAnimals(@RequestParam("animalsSearch")String animalId, Model model) throws IOException {
 
-		Animals[] animalsDetail = animalsservice.getAnimalById(animalId);
+		Animals[] animalsDetail = animalsService.getAnimalById(animalId);
 
 		model.addAttribute("animalsDetail", animalsDetail);
 
